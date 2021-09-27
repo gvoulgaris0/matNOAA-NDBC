@@ -62,7 +62,7 @@ end
 period = ['&begin_date=',num2str(StartDate),'&end_date=',num2str(EndDate)];
 params = ['&datum=',datum,'&station=',num2str(StationID),'&time_zone=',TimeZone,'&units=',Units,'&format=CSV'];
 Link   = [BaseAddress,period,params];
-fname  =[datum,'_',num2str(StationID),'_',num2str(BeginDate),'_',num2str(EndDate),'.mat'];
+fname  =[datum,'_',num2str(StationID),'_',num2str(StartDate),'_',num2str(EndDate),'.mat'];
 www    = webread(Link);  % downloads the data and saves it in a file
 time   = datenum(www.(1));
 eta    = www.(2);
